@@ -17,6 +17,7 @@ jobs:
           bash compare.sh
 
       - name: Trigger release
+        if: ${{ env.SYNCED == 0 }}
         env:
           GH_REPO: ${{ github.repository }}
           GH_TOKEN: ${{ github.token }}

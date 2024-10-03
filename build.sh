@@ -18,7 +18,7 @@ ldflags="\
 -X 'github.com/alist-org/alist/v3/internal/conf.WebVersion=$webVersion' \
 "
 
-CGO_ENABLED=1
-CC="clang --target=aarch64-unknown-freebsd14.1 --sysroot=/opt/freebsd"
-GOOS=freebsd
+export CGO_ENABLED=1
+export CC="clang --target=x86_64-unknown-freebsd14.1 --sysroot=/opt/freebsd"
+export GOOS=freebsd
 go build -ldflags="$ldflags" -tags=jsoniter .

@@ -9,11 +9,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Set up Go
-      uses: actions/setup-go@v5
-      with:
-        go-version: 'stable'
-
     - name: Setup FreeBSD base
       run: |
         wget -q https://download.freebsd.org/releases/amd64/14.1-RELEASE/base.txz
