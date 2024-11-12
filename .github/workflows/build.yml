@@ -38,11 +38,3 @@ jobs:
         tag_name: ${{ steps.tag.outputs.release_tag }}
         files: |
               alist/alist
-              
-    - name: Delete workflow runs
-      uses: Mattraks/delete-workflow-runs@v2
-      with:
-        token: ${{ github.token }}
-        repository: ${{ github.repository }}
-        retain_days: 1
-        keep_minimum_runs: 8
